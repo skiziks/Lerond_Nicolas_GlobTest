@@ -1,9 +1,13 @@
+C'est embétant pour Echo d'avoir trouvé cette mystérieuse fonction mais de ne pas avoir retrouvé le code...
+Je veux bien d'abord l'aider à la comprendre puis lui refaire le code pour son plaisir !
+
+
 ## Étapes de la fonction :
 
 ### Entrée
 Un tableau contenant plusieurs sous-tableaux, chacun représentant une suite d'entiers par ses bornes de début et de fin.
 
-### Expansion des suites
+### Suites
 Pour chaque sous-tableau, la fonction génère la liste complète des entiers de la suite correspondante. Par exemple :
 
 - `[0, 5]` devient `[0, 1, 2, 3, 4, 5]`
