@@ -39,7 +39,6 @@ function foo(array $arrays)
     }
 
     // Trier les tableaux
-
     if (!function_exists('compareArrays')) {
         // Définir la fonction compareArrays
         function compareArrays($a, $b)
@@ -56,12 +55,13 @@ function foo(array $arrays)
     // Tri du tableau $result en utilisant la fonction de comparaison personnalisée
     usort($result, 'compareArrays');
 
-    // Formatage et affichage du résultat avec map et implode pour avoir le rendu souhaité
-    $formattedResult = array_map(function ($group) {
-        return '[' . implode(', ', $group) . ']';
-    }, $result);
+    // Utilisation de json_encode pour une sortie propre
+    $json_result = json_encode($result);
 
-    echo '[' . implode(', ', $formattedResult) . ']';
+    // Ajout d'espaces après les virgules
+    $json_result = preg_replace('/,/', ', ', $json_result);
+
+    echo $json_result;
     echo "<br>"; // Pas demandé mais c'est mieux pour la lisibilité
 }
 
